@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no">
+    <link rel="stylesheet" type="text/css" href="js/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="js/jquery.fullPage.css" />
+
+    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+
+
+
+    <script language="javascript" type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    <script language="javascript" type="text/javascript" src="js/ani/TweenMax.js"></script>
+    <script language="javascript" type="text/javascript" src="js/ani/TweenMax.js"></script>
+    <script language="javascript" type="text/javascript" src="js/jquery.jsmovie.js" ></script>
+    <script language="javascript" type="text/javascript" src="js/example.js"></script>
+
+	<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>shit</title>
+    <style>
+/*     body{
+        margin: 0 auto !important;
+        padding: 0 auto !important;
+        height: 100%;
+        width: 100%;
+     }*/
+     .section{
+
+     }
+     #bg-img{
+        width: 100%;
+        height: 100% !important;
+        position: absolute;
+        z-index: 10;
+     }
+     #pant-img{
+        position: absolute;
+        z-index: 11;
+     }
+     #first-mask{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(211,35,58);
+        text-align: center;
+        padding-top: 200px;
+        z-index: 100;
+     }
+    #first-question{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        text-align: center;
+        z-index: 99;
+     }
+     #second-mask{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(211,35,58);
+        text-align: center;
+        padding-top: 100px;
+        display: none;
+        z-index: 99;
+     }
+     #first-trigger{
+        display: none;
+        position: absolute;
+        top:50%;
+        left:50%;
+        margin-left: -50px;
+        margin-top: -50px;
+        width: 100px;
+        height: 100px;
+        background-color: rgba(0, 255, 0,0); 
+        z-index: 98;
+     }
+     #first-level{
+        display: none;
+        position: fixed;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 97;
+     }
+     #third-btn p{
+        color: #000 !important;
+     }
+
+     #second-level{
+        display: none;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+     }
+
+     .jsMovieFrame{
+         background-image: 100%;
+     }
+
+     #ball{
+        width: 80px;
+        height: 80px;
+        position:absolute;
+        left:50%;
+        top:50%;
+        margin-top: -40px;
+        margin-left: -40px;
+        z-index: 13;
+/*        margin-top:-25px;
+        margin-left:-25px;*/
+     }
+    #second-question{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        text-align: center;
+        z-index: 96;
+     }
+
+     #mayun{
+        display: none;
+        width: 40px;
+        height: 50px;
+        margin-top: 100px;
+        margin-left: -20px;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        z-index: 15;
+     }
+     #pan{
+        display: none;
+        width: 40px;
+        height: 50px;
+        margin-top: 100px;
+        margin-left: -20px;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        z-index: 14;
+     }
+    #mayun2{
+        display: none;
+        width: 40px;
+        height: 50px;
+        margin-top: 100px;
+        margin-left: -20px;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        z-index: 15;
+     }
+     #pan2{
+        display: none;
+        width: 40px;
+        height: 50px;
+        margin-top: 100px;
+        margin-left: -20px;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        z-index: 14;
+     }
+    #pan3{
+        display: none;
+        width: 40px;
+        height: 50px;
+        margin-top: 100px;
+        margin-left: -20px;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        z-index: 14;
+     }
+    #third-level{
+        display: none;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+     }
+    #flower{
+        width: 400px;
+        height: 600px;
+        margin-top: 20px;
+        margin-left: 0px;
+        position: absolute;
+        left: 20%;
+        top:40%;
+        z-index: 90;
+     }
+    #flower-cover{
+        width: 400px;
+        height: 600px;
+        margin-top: 20px;
+        margin-left: 0px;
+        position: absolute;
+        left: 20%;
+        top:40%;
+        z-index: 92;
+     }
+     #cover-img{
+        width: 100%;
+        height: 100% !important;
+        position: absolute;
+        z-index: 91;
+     }
+    #hair{
+        width: 200px;
+        height:200px;
+        margin-top: 20px;
+        margin-left: 0px;
+        position: absolute;
+        left: 20%;
+        top:15%;
+        z-index: 90;
+     }
+    #third-question{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        text-align: center;
+        z-index: 89;
+     }
+
+    #fourth-level{
+        display: none;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+     }
+
+    #bg-img3{
+        width: 100%;
+        height: 100% !important;
+        position: absolute;
+        z-index: 86;
+     }
+    #sky{
+        width: 200%;
+        height:130%;
+        margin-top: 0px;
+        margin-left: -40px;
+        position: absolute;
+        left: 0%;
+        top:0%;
+        z-index: 85;
+     }
+    #ass1{
+        width: 80px;
+        height: 120px;
+        margin-top: 0px;
+        margin-left: -20px;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        z-index: 88;
+     }
+    #ass-ani1{
+        display: none;
+        width: 80px !important;
+        height: 120px;
+        margin-top: 0px;
+        margin-left: -20px;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        z-index: 89;
+     }
+    #ass2{
+        width: 80px;
+        height: 120px;
+        margin-top: 10px;
+        margin-left: -20px;
+        position: absolute;
+        left: 10%;
+        top:50%;
+        z-index: 88;
+     }
+    #ass-ani2{
+        display: none;
+        width: 80px !important;
+        height: 120px;
+        margin-top: 10px;
+        margin-left: -20px;
+        position: absolute;
+        left: 10%;
+        top:50%;
+        z-index: 89;
+     }
+    #ass3{
+        width: 40px;
+        height: 60px;
+        margin-top: 10px;
+        margin-left: -20px;
+        position: absolute;
+        left: 40%;
+        top:10%;
+        z-index: 88;
+     }
+    #ass-ani3{
+        display: none;
+        width: 40px !important;
+        height: 60px;
+        margin-top: 10px;
+        margin-left: -20px;
+        position: absolute;
+        left: 40%;
+        top:10%;
+        z-index: 89;
+     }
+     #fourth-question{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        text-align: center;
+        z-index: 85;
+     }
+    .question-title{
+        top:0px;
+        position: relative;
+        width: 100%;
+     }
+    .question-title img{
+        width: 100%;
+     }
+    .question-text{
+        position: absolute;
+        font-size: 20px;
+        top:50px;
+        right: 40px;
+     }
+    #enter-btn1{
+        position: relative;
+     }
+    #enter-btn1 img{
+        width: 100%;
+     }
+    #enter-btn2{
+        position: relative;
+     }
+    #enter-btn2 img{
+        width: 100%;
+     }
+    .line-wrap{
+        position: relative;
+     }
+    .line-wrap img{
+        width: 100%;
+     }
+    .question-btn1{
+        position: relative;
+        height: 20%;
+        padding-top: 10%;
+        font-size: 30px;
+        color:#000;
+        vertical-align: center;
+     }
+    .question-btn2{
+        position: relative;
+        height: 20%;
+        padding-top: 10%;
+        font-size: 30px;
+        vertical-align: center;
+     }
+    .question-btn3{
+        position: relative;
+        height: 20%;
+        padding-top: 10%;
+        font-size: 30px;
+        vertical-align: center;
+     }
+    .question-btn4{
+        position: relative;
+        height: 20%;
+        padding-top: 10%;
+        font-size: 30px;
+        vertical-align: center;
+     }
+    .question-btn5{
+        position: relative;
+        height: 20%;
+        padding-top: 10%;
+        font-size: 30px;
+        vertical-align: center;
+     }
+     .question-btn6{
+        position: relative;
+        height: 20%;
+        padding-top: 10%;
+        font-size: 30px;
+        vertical-align: center;
+     }
+    #fifth-level{
+        display: none;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+     }
+    #worm{
+        width: 100%;
+        height:100% !important;
+        position: absolute;
+        z-index: 82;
+     }
+     #fifth-question{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        text-align: center;
+        z-index: 85;
+     }
+
+    #sixth-level{
+        display: none;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: #d4243b;
+     }
+    #figure{
+        width: 100%;
+        height: 100% !important;
+        position: absolute;
+        z-index: 76;
+     }
+    #player{
+        display: none;
+        width: 100%;
+        position: absolute;
+        z-index: 78;
+     }
+    #waveB{
+        display: none;
+        width: 100%;
+        bottom: 0px;
+        position: absolute;
+        z-index: 77;
+     }
+    #waveS{
+        display: none;
+        width: 100%;
+        bottom: 0px;
+        position: absolute;
+        z-index: 77;
+     }
+     #player-btn{
+        width: 40px !important;
+        height: 40px;
+        position: absolute;
+        left: 40%;
+        top:60%;
+        z-index: 79;
+/*        background-color: #000;*/
+     }
+     #sixth-question{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        text-align: center;
+        z-index: 66;
+     }
+    #seventh-question{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        text-align: center;
+        z-index: 66;
+     }
+    #score-text{
+        margin: 0 auto;
+        margin-top: 160px;
+        font-size: 20px;
+        width: 50px;
+        color:#000;
+     }
+     #score{
+        margin: 0 auto;
+        margin-top: 20px;
+        font-size: 20px;
+        width: 50px;
+        color:#000;
+     }
+    </style>
+</head>
+<body style="background-color: gray;">
+   
+    
+    <div id="first-mask">
+        <div id="enter-btn1">
+            <img src="img/enter1.png" />
+        </div>
+    </div>
+    <div id="second-mask">
+        <div id="enter-btn2">
+            <img src="img/enter2.png" />
+        </div>
+    </div>
+
+    <div id="first-level">   
+    </div>
+    <div id="first-level2">   
+    </div>
+    <div id="first-trigger"></div>
+    <div id="first-question">
+        <div class="question-title">
+            <p class="question-text">刚才吸尘器甩了几下</p>
+            <img src="img/question/head.png" />
+        </div>
+
+        <div class="question-btn1">
+            <p>4下</p>
+        </div>
+        <div class="line-wrap">
+            <img src="img/question/line3.png" />
+        </div>
+        <div id="do1" class="question-btn1">
+            <p>5下</p>
+        </div>
+        <div class="line-wrap">
+            <img src="img/question/line3.png" />
+        </div>
+        <div class="question-btn1">
+            <p>去你妈</p>
+        </div>
+    </div>
+    <div id="second-level">
+        <div id="fullpage">
+            <img id="bg-img" src="img/cannon/bg2.gif" alt="fullPage"  />
+            <img id="ball" src="img/cannon/cannon.png" align="middle" />
+            <div >
+                <img id="mayun" src="img/cannon/mayun.png"alt="fullPage"  align="middle" >
+            </div>
+            <div >
+                <img id="pan" src="img/cannon/pan.png" alt="fullPage" align="middle" >
+            </div>
+            <div >
+                <img id="mayun2" src="img/cannon/pan.png" alt="fullPage" align="middle" >
+            </div>
+            <div >
+                <img id="pan2" src="img/cannon/mayun.png" alt="fullPage" align="middle" >
+            </div>
+            <div >
+                <img id="pan3" src="img/cannon/pan.png" alt="fullPage" align="middle" >
+            </div>
+        </div>
+    </div>
+   <div id="second-question">
+        <div class="question-title">
+            <p class="question-text">头像炮弹的顺序是？</p>
+            <img src="img/question/head.png" />
+        </div>
+        <div id="do2" class="question-btn2">
+            <p>马-潘-马-马-马</p>
+        </div>
+        <div class="line-wrap">
+            <img src="img/question/line3.png" />
+        </div>
+        <div class="question-btn2">
+            <p>潘-马-马-马-潘</p>
+        </div>
+        <div class="line-wrap">
+            <img src="img/question/line3.png" />
+        </div>
+        <div class="question-btn2">
+            <p>马-马-潘-马-潘</p>
+        </div>
+    </div>
+    <div id="third-level">
+        <div id="fullpage2">
+
+            <img id="bg-img" src="img/flower/bg.jpg" alt="fullPage"  />
+            <img id="flower" src="img/flower/flower.png" alt="fullPage"  />
+            <img id="hair" src="img/flower/hair.png" alt="fullPage"  />
+            <img id="cover-img" src="img/flower/cover.png" alt="fullPage" />
+            <div id="flower-cover" ></div>
+        </div>
+    </div>
+   <div id="third-question">
+        <div class="question-title">
+            <p class="question-text">头发的颜色是</p>
+            <img src="img/question/head.png" />
+        </div>
+        <div class="question-btn3">
+            <p>rgb(255,0,0)</p>
+        </div>
+        <div class="line-wrap">
+            <img src="img/question/line3.png" />
+        </div>
+        <div id="do3" class="question-btn3">
+            <p>rgb(255,10,0)</p>
+        </div>
+        <div class="line-wrap">
+            <img src="img/question/line3.png" />
+        </div>
+        <div class="question-btn3">
+            <p>rgb是什么鬼</p>
+        </div>
+    </div>
+    <div id="fourth-level">
+        <div id="fullpage3">
+            <img id="sky" src="img/windows/sky.png" />
+            <img id="bg-img3" src="img/windows/grass.png" alt="fullPage"  />
+            <img id="ass1" src="img/windows/ani/c10.png">
+            <div id="ass-ani1" ></div>
+            <img id="ass2" src="img/windows/ani2/e1.png">
+            <div id="ass-ani2" ></div>
+            <img id="ass3" src="img/windows/ani3/d1.png">
+            <div id="ass-ani3" ></div>
+        </div>
+    </div>
+    <div id="fourth-question">
+        <div class="question-title">
+            <p class="question-text">刚才的界面是window哪个版本</p>
+            <img src="img/question/head.png" />
+        </div>
+        <div id="do4" class="question-btn4">
+            <p>windows98</p>
+        </div>
+        <div class="line-wrap">
+            <img src="img/question/line3.png" />
+        </div>
+        <div class="question-btn4">
+            <p>windows99</p>
+        </div>
+        <div class="line-wrap">
+            <img src="img/question/line3.png" />
+        </div>
+        <div class="question-btn4">
+            <p>windows100</p>
+        </div>
+    </div>
+    <div id="fifth-level">
+        <div id="fullpage4">
+            <img id="bg-img" src="img/worm/bg.png" />
+            <div id="worm"></div>
+        </div>
+    </div>
+    <div id="fifth-question">
+        <div class="question-title">
+            <p class="question-text">刚才看到了啥</p>
+            <img src="img/question/head.png" />
+        </div>
+        <div class="question-btn5">
+            <p>windows98</p>
+        </div>
+        <div class="line-wrap">
+            <img src="img/question/line3.png" />
+        </div>
+        <div id="do5" class="question-btn5">
+            <p>windows99</p>
+        </div>
+        <div class="line-wrap">
+            <img src="img/question/line3.png" />
+        </div>
+        <div class="question-btn5">
+            <p>windows100</p>
+        </div>
+    </div>
+    <div id="sixth-level">
+        <div id="fullpage5">
+            <img id="figure" src="img/player/girl2.png"/>
+            <img id="player" src="img/player/player2.png"/>
+            <img id="waveB" src="img/player/waveBig.png">
+            <img id="waveS" src="img/player/waveSmall.png">
+            <div id="player-btn"></div>
+        </div>
+    </div>
+    <div id="sixth-question">
+        <div class="question-title">
+            <p class="question-text">唱片问题我忘了</p>
+            <img src="img/question/head.png" />
+        </div>
+        <div class="question-btn6">
+            <p>答案一</p>
+        </div>
+        <div class="line-wrap">
+            <img src="img/question/line3.png" />
+        </div>
+        <div class="question-btn6">
+            <p>答案二</p>
+        </div>
+        <div class="line-wrap">
+            <img src="img/question/line3.png" />
+        </div>
+        <div id="do6" class="question-btn6">
+            <p>答案三</p>
+        </div>
+    </div>
+    <div id="seventh-question">
+        <div class="question-title">
+            <p id="score-text">得分是？</p>
+            <p id="score"></p>
+    </div>
+
+    </div>
+</body>
+</html>
