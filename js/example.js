@@ -3,7 +3,7 @@ $(document).ready(function(){
 
     var score = 0;
 
-    $('#fullpage').fullpage({
+    $('#fullpage1').fullpage({
 
       // continuousVertical: true,
       // scrollingSpeed: 300
@@ -107,23 +107,67 @@ $(document).ready(function(){
     $('#first-level').jsMovie("addClip","b",12,24);
 
 
-    //  第一关出现 //
+    //  第0关出现 //
 
     $("#enter-btn2").click(function(){
         $('#second-mask').hide();
+        $('#zero-level').show();
+        // $('#first-level').show();
+        // $('#first-trigger').show();
+        // $("#first-level").jsMovie("option","repeat",true);
+        // $('#first-level').jsMovie("playClip", "a");
+
+    });
+
+    var threeFlag1 = 0;
+    var threeFlag2 = 0;
+    var threeFlag3 = 0;
+
+    $("#three1").click(function(){
+            $('#three1').attr('src','img/three/l2.png');
+            threeFlag1 =1;
+
+            if(threeFlag1&&threeFlag2&&threeFlag3){
+                console.log("zeor");
+                setTimeout(function() {
+                    $('#zero-question').show(0);
+                }, 1000);
+            }
+    });
+    $("#three2").click(function(){
+            $('#three2').attr('src','img/three/m2.png');
+            threeFlag2 =1;
+
+            if(threeFlag1&&threeFlag2&&threeFlag3){
+                console.log("zeor");
+                setTimeout(function() {
+                    $('#zero-question').show(0);
+                }, 1000);
+            }
+    });
+    $("#three3").click(function(){
+            $('#three3').attr('src','img/three/r2.png');
+            threeFlag3 =1;
+
+            if(threeFlag1&&threeFlag2&&threeFlag3){
+                console.log("zeor");
+                setTimeout(function() {
+                    $('#zero-question').show(0);
+                }, 1000);
+            }
+    });
+//  第一关出现 //
+    
+    $(".question-btn0").click(function(){
+        $('#zero-question').hide();
+        $('#zero-level').hide();
         $('#first-level').show();
         $('#first-trigger').show();
         $("#first-level").jsMovie("option","repeat",true);
         $('#first-level').jsMovie("playClip", "a");
-
     });
 
-
-
-
-
-    //  第一问题出现 //
-
+//  第一问题出现 //
     $("#first-trigger").click(function(){
         $('#first-trigger').hide();
         $("#first-level").jsMovie("option","repeat",false);
@@ -335,8 +379,9 @@ $(document).ready(function(){
         }
         $('#sixth-question').hide();
         $('#sixth-level').hide();
-        $("#score").text(score);
-        $('#seventh-question').show();
+        // $("#score").text(score);
+        // $('#seventh-question').show();
+        $('#seventh-level').show();
 
     });
 });
